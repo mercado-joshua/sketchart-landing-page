@@ -1,0 +1,66 @@
+@use '../utils/breakpoints';
+
+.footer-section {
+    padding: 2rem 0;
+    border-top: dashed #777a7c;
+
+    .footerbox {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        > .introbox {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            > .title {
+                font-size: 1.3rem;
+            }
+        }
+
+        > .quicklinks {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            > .linkbox {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+
+                > .title {
+                    font-size: 1.3rem;
+                }
+
+                > .links {
+                    > .item {
+                        > .link {
+                            color: #777a7c;
+                            transition: all 150ms;
+
+                            &:hover {
+                                color: #4946F6;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include breakpoints.media-breakpoint-up(768px) {
+                flex-direction: row;
+                gap: 1.5rem;
+            }
+        }
+
+        @include breakpoints.media-breakpoint-up(768px) {
+            display: grid;
+            grid-template-columns: 40% 1fr;
+            gap: 2.5rem;
+        }
+    }
+
+    @include breakpoints.media-breakpoint-up(768px) {
+        padding: 3rem 0;
+    }
+}

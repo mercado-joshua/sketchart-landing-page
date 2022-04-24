@@ -1,0 +1,32 @@
+@use '../utils/breakpoints';
+
+.testimonial-section {
+    padding: 2rem 0;
+
+    @include breakpoints.media-breakpoint-up(768px) {
+        padding: 3rem 0;
+    }
+}
+
+.testimony-card {
+    > .wiredbox {
+        padding: 1rem;
+        width: 100%;
+
+        > .layoutbox {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            > .profilebox {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                > .name {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

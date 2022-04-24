@@ -1,0 +1,92 @@
+@use '../../utils/breakpoints';
+
+.form-section {
+    min-height: 100vh;
+
+    @include breakpoints.media-breakpoint-up(768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.formbox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 10% 2rem 10%;
+
+    > .title {
+        font-size: 1rem;
+        
+        > .link {
+            color: #000;
+        }
+    }
+
+    > .subtitle {
+        font-size: 1.7rem;
+    }
+
+    > .description {
+        text-align: center;
+    }
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    > .input-control {
+        display: flex;
+        flex-direction: column;
+
+        > .name,
+        > .email,
+        > .password {
+            width: 100%;
+            padding: .2rem;
+        }
+    }
+
+    > .submit-btn {
+        color: #4946F6;
+        align-self: flex-start;
+    }
+}
+
+.sliderbox {
+    display: none;
+
+    @include breakpoints.media-breakpoint-up(768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: dashed #777a7c;
+        padding: 2rem 10% 2rem 10%;
+    }
+}
+
+.slider-list {
+    max-width: 400px;
+}
+
+.slider-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    > .contentbox {
+        margin-bottom: 3rem;
+
+        > .title,
+        > .description {
+            text-align: center;
+        }
+
+        > .title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch.art</title>
+    <meta name="description" content="">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+    <div class="form-section">
+        <div class="formbox"> 
+            <h2 class="title"><a href="/" class="link">Sketch.art</a></h2>
+            <h3 class="subtitle">Create your Sketch.art account</h3>
+
+            <form 
+                action="" 
+                class="signup-form"
+                data-js-signup-form
+            >
+                <div class="input-control">
+                    <label for="name" class="label">Your Name</label>
+
+                    <wired-input 
+                        placeholder="John Doe"
+                        id="name"
+                        class="name"
+                        pattern="[A-Za-z ]+" 
+                        data-js-fullname 
+                        required
+                    ></wired-input>
+                </div>
+
+                <div class="input-control">
+                    <label for="email" class="email">Email</label>
+
+                    <wired-input 
+                        placeholder="john@example.com"
+                        type="email"
+                        id="email"
+                        class="email"
+                        required 
+                        data-js-email
+                    ></wired-input>
+                </div>
+
+                <div class="input-control">
+                    <label for="password" class="label">Password</label>
+
+                    <wired-input 
+                        placeholder="At least 8 characters"
+                        type="password"
+                        id="password"
+                        class="password"
+                        minlength="8"
+                        required 
+                        data-js-password
+                    ></wired-input>
+                </div>
+
+                <div class="checkbox-control">
+                    <wired-checkbox 
+                        class="checkbox" 
+                        data-js-agree-btn
+                    >By creating an account on Sketch.art, you agree to the <wired-link href="#" target="_blank">Terms and Conditions</wired-link></wired-checkbox>
+                </div>
+
+                <wired-button class="submit-btn" type="submit">Create Fiber Account</wired-button>
+            </form>
+
+            <p class="description">Already have an account? <wired-link href="#" target="_blank">Sign in</wired-link></p>
+        </div>
+        <!-- .formbox -->
+
+        <div class="sliderbox">
+            <div class="swiper slider-list" data-js-slider-list>
+                <div class="swiper-wrapper">
+
+
+
+                    <div class="swiper-slide slider-card">
+                        <div class="imagebox">
+                            <img src="./images/house.png" alt="" class="image">
+                        </div>
+    
+                        <div class="contentbox">
+                            <h2 class="title">Unparalled Templates</h2>
+    
+                            <p class="description">Crafted by a team of professional artists, our sketches are unparalled in the market.</p>
+                        </div>
+                    </div>
+                    <!-- .slider-card ends -->
+
+                    <div class="swiper-slide slider-card">
+                        <div class="imagebox">
+                            <img src="./images/building-sketch.png" alt="" class="image">
+                        </div>
+    
+                        <div class="contentbox">
+                            <h2 class="title">Flexible Plans</h2>
+    
+                            <p class="description">Whether you are a professional or hobbyist, there is a plan just for you.</p>
+                        </div>
+                    </div>
+                    <!-- .slider-card ends -->
+
+                </div>
+                <div class="swiper-pagination"></div>
+                
+            </div>
+            <!-- .slider-list ends -->
+        </div>
+        <!-- .sliderbox ends -->
+    </div>
+    <!-- .form-section ends -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/wired-elements?module"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/polyfill.js"></script>
+    <script src="js/account/behaviors/slider-list.js"></script>
+</body>
+</html>
